@@ -1,0 +1,75 @@
+.architecture-diagram {
+  display: grid;
+  gap: 18px;
+}
+
+.architecture-layer {
+  display: grid;
+  grid-template-columns: 84px 1fr;
+  gap: 20px;
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-md);
+  padding: 22px;
+  background: linear-gradient(180deg, rgba(255,255,255,0.035), rgba(255,255,255,0.02));
+}
+
+.architecture-layer__index {
+  width: 64px;
+  height: 64px;
+  border-radius: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--accent-bg);
+  color: var(--accent-color);
+  font-weight: 800;
+  font-size: 22px;
+}
+
+.architecture-layer__title {
+  margin: 0 0 12px;
+  font-size: 24px;
+  color: var(--text-primary);
+}
+
+.architecture-layer__list {
+  margin: 0;
+  padding-left: 20px;
+  display: grid;
+  gap: 10px;
+}
+
+.architecture-layer__list-item {
+  color: var(--text-secondary);
+  line-height: 1.65;
+}
+
+.architecture-highlights {
+  display: grid;
+  gap: 20px;
+}
+
+.architecture-highlight-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 18px;
+}
+
+.architecture-highlight-card {
+  border: 1px solid var(--border-color);
+  border-radius: 18px;
+  padding: 18px 20px;
+  background: rgba(255,255,255,0.03);
+  color: var(--text-secondary);
+  line-height: 1.65;
+}
+
+@media (max-width: 1100px) {
+  .architecture-layer {
+    grid-template-columns: 1fr;
+  }
+
+  .architecture-highlight-grid {
+    grid-template-columns: 1fr;
+  }
+}

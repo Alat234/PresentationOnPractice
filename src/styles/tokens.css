@@ -1,0 +1,38 @@
+:root {
+    --color-bg: #08101f;
+    --color-bg-soft: #0f1930;
+    --color-surface: rgba(255, 255, 255, 0.06);
+    --color-surface-strong: rgba(255, 255, 255, 0.1);
+    --color-border: rgba(255, 255, 255, 0.12);
+    --color-text: #f4f7ff;
+    --color-text-soft: #aab7d4;
+    --color-accent: #73a9ff;
+    --color-accent-2: #90efd0;
+    --shadow-soft: 0 22px 60px rgba(0, 0, 0, 0.28);
+
+    --radius-xl: 28px;
+    --radius-lg: 22px;
+    --radius-md: 16px;
+    --radius-sm: 12px;
+
+    --content-max-width: 1320px;
+    --nav-width: 250px;
+
+    /* aliases for newer component styles */
+    --bg-primary: var(--color-bg);
+    --bg-secondary: var(--color-bg-soft);
+
+    --surface-primary: var(--color-surface);
+    --surface-secondary: var(--color-surface-strong);
+
+    --border-color: var(--color-border);
+
+    --text-primary: var(--color-text);
+    --text-secondary: #d7e2ff;
+    --text-muted: var(--color-text-soft);
+
+    --accent-color: var(--color-accent);
+    --accent-color-2: var(--color-accent-2);
+    --accent-bg: rgba(115, 169, 255, 0.12);
+    --accent-border: rgba(115, 169, 255, 0.28);
+}
