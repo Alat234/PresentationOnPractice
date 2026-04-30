@@ -1,60 +1,60 @@
 const functionality = {
-  summary: [
-    {
-      title: 'Робота з користувачем',
-      value: 'Authentication + access control',
-      description:
-        'Користувач може зареєструватися, увійти в систему та працювати лише зі своїми даними.',
-    },
-    {
-      title: 'Робота з маршрутами',
-      value: 'Upload → parse → visualize',
-      description:
-        'Система приймає файли маршрутів, перевіряє формат, зчитує координати та готує їх до відображення.',
-    },
-    {
-      title: 'Аналіз',
-      value: 'Comparison + statistics',
-      description:
-        'Маршрути можна порівнювати між собою, а також переглядати їхню статистику і допоміжну інформацію.',
-    },
-  ],
-  groups: [
-    {
-      title: 'User features',
-      items: [
-        'registration and login',
-        'user-specific access to uploaded tracks',
-        'separation of data between different users',
-      ],
-    },
-    {
-      title: 'Track processing',
-      items: [
-        'upload of GPX/KML files',
-        'validation of file format before processing',
-        'parsing coordinates and preparing route data',
-        'saving file metadata and parsed data to database',
-      ],
-    },
-    {
-      title: 'Visualization and analysis',
-      items: [
-        'displaying tracks on an interactive map',
-        'start and finish markers for routes',
-        'route comparison by similarity',
-        'route statistics: points, bounds, approximate distance',
-      ],
-    },
-    {
-      title: 'Dashboard usability',
-      items: [
-        'search and sorting in the track list',
-        'recent uploads block',
-        'compact dashboard layout for daily work with tracks',
-      ],
-    },
-  ],
+    summary: [
+        {
+            title: 'Робота з користувачем',
+            value: 'Автентифікація та контроль доступу',
+            description:
+                'Користувач може зареєструватися, увійти в систему та працювати лише зі своїми даними.',
+        },
+        {
+            title: 'Робота з маршрутами',
+            value: 'Завантаження → парсинг → візуалізація',
+            description:
+                'Система приймає файли маршрутів, перевіряє формат, зчитує координати та готує їх до відображення.',
+        },
+        {
+            title: 'Аналіз',
+            value: 'Порівняння та статистика',
+            description:
+                'Маршрути можна порівнювати між собою, а також переглядати їхню статистику і допоміжну інформацію.',
+        },
+    ],
+    groups: [
+        {
+            title: 'Функції для користувача',
+            items: [
+                'реєстрація та вхід у систему',
+                'доступ лише до власних завантажених маршрутів',
+                'розмежування даних між різними користувачами',
+            ],
+        },
+        {
+            title: 'Обробка маршрутів',
+            items: [
+                'завантаження файлів GPX/KML',
+                'перевірка формату файлу перед обробкою',
+                'парсинг координат і підготовка даних маршруту',
+                'збереження метаданих файлу та оброблених даних у базу даних',
+            ],
+        },
+        {
+            title: 'Візуалізація та аналіз',
+            items: [
+                'відображення маршрутів на інтерактивній карті',
+                'позначення початку і кінця маршруту',
+                'порівняння маршрутів за рівнем схожості',
+                'статистика маршруту: кількість точок, межі, приблизна відстань',
+            ],
+        },
+        {
+            title: 'Зручність dashboard',
+            items: [
+                'пошук і сортування у списку маршрутів',
+                'блок нещодавніх завантажень',
+                'компактний dashboard-інтерфейс для щоденної роботи з маршрутами',
+            ],
+        },
+    ],
 }
 
 export default functionality
