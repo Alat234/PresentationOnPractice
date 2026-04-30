@@ -1,68 +1,103 @@
 import SlideShell from '../components/layout/SlideShell'
 import demo from '../data/demo'
+import dashboardMain from '../assets/demo/dashboard-main.png'
+import compareResult from '../assets/demo/compare-result.png'
+import mapView from '../assets/demo/map-view.png'
 import '../styles/slides/slide09-demo.css'
 
 function Slide09Demo() {
-  return (
-    <SlideShell
-      number="09"
-      label="Демонстрація"
-      title="Інтерфейс і демонстрація"
-      subtitle="Інтерфейс проєкту був побудований як dashboard, у якому основні сценарії роботи з маршрутами зібрані в одному вікні."
-    >
-      <section className="demo-layout">
-        <div className="demo-browser">
-          <div className="demo-browser__topbar">
-            <span className="demo-browser__dot" />
-            <span className="demo-browser__dot" />
-            <span className="demo-browser__dot" />
-          </div>
+    return (
+        <SlideShell
+            number="09"
+            label="Демонстрація"
+            title="Інтерфейс і демонстрація"
+            subtitle="Інтерфейс проєкту побудований як dashboard, у якому основні сценарії роботи з маршрутами зібрані в одному вікні."
+        >
+            <section className="demo-gallery">
+                <article className="demo-shot demo-shot--primary">
+                    <div className="demo-shot__image-wrap">
+                        <img
+                            src={dashboardMain}
+                            alt="Головний екран dashboard"
+                            className="demo-shot__image"
+                        />
+                    </div>
+                    <div className="demo-shot__content">
+                        <h2 className="demo-shot__title">Головний робочий екран</h2>
+                        <p className="demo-shot__text">
+                            На головній сторінці поєднано список маршрутів, пошук, сортування,
+                            блок нещодавніх завантажень та інтерактивну карту.
+                        </p>
+                    </div>
+                </article>
 
-          <div className="demo-browser__body">
-            <aside className="demo-browser__sidebar">
-              <div className="demo-browser__panel demo-browser__panel--small">Upload track</div>
-              <div className="demo-browser__panel demo-browser__panel--large">
-                <span>Track list</span>
-                <span>Search & Sort</span>
-                <span>Mode / Actions</span>
-              </div>
-              <div className="demo-browser__panel demo-browser__panel--small">Recent uploads</div>
-            </aside>
+                <div className="demo-gallery__secondary">
+                    <article className="demo-shot">
+                        <div className="demo-shot__image-wrap">
+                            <img
+                                src={compareResult}
+                                alt="Екран порівняння маршрутів"
+                                className="demo-shot__image"
+                            />
+                        </div>
+                        <div className="demo-shot__content">
+                            <h2 className="demo-shot__title">Порівняння маршрутів</h2>
+                            <p className="demo-shot__text">
+                                Система відображає результат порівняння треків, відсоток схожості
+                                та додаткові параметри для аналізу.
+                            </p>
+                        </div>
+                    </article>
 
-            <div className="demo-browser__main">
-              <div className="demo-browser__status">Comparison result / track statistics</div>
-              <div className="demo-browser__map">Interactive map area</div>
-            </div>
-          </div>
-        </div>
+                    <article className="demo-shot">
+                        <div className="demo-shot__image-wrap">
+                            <img
+                                src={mapView}
+                                alt="Відображення маршрутів на карті"
+                                className="demo-shot__image"
+                            />
+                        </div>
+                        <div className="demo-shot__content">
+                            <h2 className="demo-shot__title">Візуалізація на карті</h2>
+                            <p className="demo-shot__text">
+                                Маршрути відображаються на карті з візуальним розділенням треків,
+                                маркерами та супровідною інформацією.
+                            </p>
+                        </div>
+                    </article>
+                </div>
+            </section>
 
-        <div className="demo-zones">
-          {demo.zones.map((zone) => (
-            <article className="demo-zone-card" key={zone.title}>
-              <h2 className="demo-zone-card__title">{zone.title}</h2>
-              <p className="demo-zone-card__text">{zone.text}</p>
-              <div className="demo-zone-card__tags">
-                {zone.tags.map((tag) => (
-                  <span className="demo-zone-card__tag" key={tag}>{tag}</span>
+            <section className="demo-zones">
+                {demo.zones.map((zone) => (
+                    <article className="demo-zone-card" key={zone.title}>
+                        <h2 className="demo-zone-card__title">{zone.title}</h2>
+                        <p className="demo-zone-card__text">{zone.text}</p>
+                        <div className="demo-zone-card__tags">
+                            {zone.tags.map((tag) => (
+                                <span className="demo-zone-card__tag" key={tag}>
+                  {tag}
+                </span>
+                            ))}
+                        </div>
+                    </article>
                 ))}
-              </div>
-            </article>
-          ))}
-        </div>
-      </section>
+            </section>
 
-      <section className="demo-notes">
-        <div className="section-heading">
-          <h2 className="section-heading__title">Що важливо в інтерфейсі</h2>
-        </div>
-        <ul className="demo-notes__list">
-          {demo.notes.map((note) => (
-            <li className="demo-notes__item" key={note}>{note}</li>
-          ))}
-        </ul>
-      </section>
-    </SlideShell>
-  )
+            <section className="demo-notes">
+                <div className="section-heading">
+                    <h2 className="section-heading__title">Що важливо в інтерфейсі</h2>
+                </div>
+                <ul className="demo-notes__list">
+                    {demo.notes.map((note) => (
+                        <li className="demo-notes__item" key={note}>
+                            {note}
+                        </li>
+                    ))}
+                </ul>
+            </section>
+        </SlideShell>
+    )
 }
 
 export default Slide09Demo
